@@ -367,3 +367,23 @@ def generador(*args=, **kwargs):
 
 print(generador(Hola=1, si=2))
 """
+"""
+#NamesSpace y llamadas de retorno
+Crear una función que luego sea llamada desde otra función validando la
+existencia de la función.
+
+def mensaje(nombre):
+ #Esta función retorna un mensaje de saludo
+ return "Hola " + nombre
+
+def llamada_de_retorno(nombre, funcion=""):
+ #Llamada de retorno a nivel global
+  if funcionin globals():
+ return globals()[funcion](nombre)
+ else:
+return "La función no existe"
+
+print(llamada_de_retorno("Maria", "mensaje"))
+print(llamada_de_retorno("Maria", "saludo"))
+
+"""
