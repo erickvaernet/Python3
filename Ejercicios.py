@@ -1,5 +1,5 @@
 """
-# Ejercicio1
+# Ejercicio1 NO INFO
 Solicitar al usuario que ingrese su dirección email. Imprimir un mensaje indicando si la dirección es válida o no,
 valiéndose de una función para decidirlo. Una dirección se considerará válida si contiene el símbolo @ .
 
@@ -20,7 +20,7 @@ else:
 """
 
 """
-#Ejercicio 13
+# Ejercicio 13 NO INFO
 Escribir un programa que permita al usuario obtener un identificador para cada uno de los socios de un club. Para eso ingresará nombre completo
 y número de DNI de cada socio, indicando que finalizará el procesamiento mediante el ingreso de un nombre vacío.Precondición:
 el formato del nombre de los socios será: nombre apellido. Podría ingresarse más de un nombre, en cuyo caso será: nombre1 nombre2 apellido. Si un socio tuviera más de un apellido, el usuario sólo ingresará uno.
@@ -90,4 +90,26 @@ while True:
     print("Nombre:", nombres_apellido)
     print("DNI:", dni)
     print("ID Unico:", id_unico)
+"""
+"""
+Ejercicio 13: Contraseña aleatoria SI INFORMATORIO
+Escriba una función que genere una contraseña aleatoria. La contraseña debe tener una longitud aleatoria de entre 7 y 10 caracteres.
+Cada carácter debe seleccionarse al azar de las posiciones 33 a 126 en la tabla ASCII. Su función no tomará ningún parámetro y devolverá
+la contraseña generada aleatoriamente como su único resultado. Desarrolle un programa principal y muestre la contraseña generada aleatoriamente.
+
+import random
+def password_generate():
+    digits = random.randint(7, 10)
+    digit = 1
+    password = chr(random.randint(33, 126))
+    while digit < digits:
+        random_char = chr(random.randint(33, 126))
+        password += random_char
+        digit += 1
+    return password
+
+
+print("Generador de pasword:")
+print(password_generate())
+print("fin")
 """
