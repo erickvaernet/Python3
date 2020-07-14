@@ -347,11 +347,11 @@ print(revertir("revertira?"))
 sumar = lambda x,y: x+y
 print(sumar(5,2))
 """
-
+"""
 # Funciones 2?
 
 
-def generador(*args=None, **kwargs):
+def generador(*args=, **kwargs):
     result1 = 0
     result2 = []
     for arg in args:
@@ -366,3 +366,4 @@ def generador(*args=None, **kwargs):
 
 
 print(generador(Hola=1, si=2))
+"""
