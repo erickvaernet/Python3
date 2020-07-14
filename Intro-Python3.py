@@ -9,13 +9,13 @@ result=result.lower()
 
 pos={result.find('o')}
 
-print(result) 
+print(result)
 print(pos)
 print(result.count('st'))
 print(result.replace('st','xxx'))
 print(result.split('-'))
 """
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
 LISTAS:
 Son Mutables
@@ -51,7 +51,7 @@ print(lista_2)
 lista_2.sort()
 print(lista_2)
 """
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
 TUPLAS
 similares a listas pero son Inmutables
@@ -63,7 +63,7 @@ tupla=(1,4,2,"string_1",'a',45,True,"si")
 print(tupla)
 print(tupla[3])
 """
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
 DICCIONARIOS
 no se rigen de indices, Las claves deben ser inmutables
@@ -82,7 +82,8 @@ diccionario['cuarto_elemento']="Nuevo elemento"
 print(diccionario)
 #Se pueden modificar el contenido de cada llave pero no podemos modificar la llave en si. Si la llaver existe se actualiza el contenido
 
-encuentra = diccionario.get('z',False) #Regrsa el contenido de llave 'z', si no existe regresa false   o cualquier elemento que pongamos en el segundo parametro
+#Regrsa el contenido de llave 'z', si no existe regresa false   o cualquier elemento que pongamos en el segundo parametro
+encuentra = diccionario.get('z',False)
 print( encuentra)
 
 #Eliminar un elemento con la llave usamos del
@@ -112,7 +113,7 @@ print(diccionario)
 #Metodo .items() devuelve lista de tuplas cada una con el par [(llave,contenido),(llave,contenido)]
 
 """
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
 CONDICIONALES
 
@@ -145,7 +146,7 @@ elif condicion_1 or condicion_2:
 	print("or")
 
 """
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Estructuras de control REPETITIVAS  /Bucles o iteraciones
 
@@ -168,7 +169,7 @@ while contador <=10:
 	contador += 1
 
 """
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
 #FOR
 
@@ -206,34 +207,34 @@ diccionario_for={'key1':"AAA", 'key2':2, 'key3':True}
 for llave, contenido in diccionario_for.items():
 	print("La llave", llave, "tiene de contenido:",contenido,)
 """
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
-COMPREHENSIONS 
+COMPREHENSIONS
 Realizar listas,tuplas,diccionarios y llenarlos
 
-lista_e = [pares for pares in range(10) if pares%2==0] 
+lista_e = [pares for pares in range(10) if pares%2==0]
 print("lista_e",lista_e)
 
-tupla_e = tuple(pares for pares in range(10) if pares%2==0) 
+tupla_e = tuple(pares for pares in range(10) if pares%2==0)
 print("tupla_e",tupla_e)
 
-diccionario_e = { key:content for key,content in enumerate(lista_e) if key<6 } 
+diccionario_e = { key:content for key,content in enumerate(lista_e) if key<6 }
 print("diccionario_e",diccionario_e)
 """
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """"
 #EXTRAS INFORMATORIO
 
 #LISTAS
 lista_info = ['uno',1,'dos',"dois",'tres',False]
 elem_lista = len( lista_info )
-print(elem_lista) 
+print(elem_lista)
 
 #CONDICIONAL WHILE
 podemos usar else despues de while para indicar que pasa cuando finaliza while (RECONOCe las variables locales de while)
 
 """
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
 Desafios INFO
 
@@ -270,7 +271,7 @@ materias["viernes"] = [6201]
 print (materias[1])
 """
 
-#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
 FUNCIONES
 
@@ -323,7 +324,7 @@ def sumar(*args):
 	for i in args:
 		result +=i
 	return result
- 
+
 print(sumar(1,2,3,4,5,6,7,8,9,10))
 
 #SIMILAR con ** pero es como diccionario
@@ -346,3 +347,22 @@ print(revertir("revertira?"))
 sumar = lambda x,y: x+y
 print(sumar(5,2))
 """
+
+# Funciones 2?
+
+
+def generador(*args=None, **kwargs):
+    result1 = 0
+    result2 = []
+    for arg in args:
+        result1 += arg
+        if arg == None:
+            print("no hay arg")
+
+    for kwarg in kwargs:
+        result2 += kwarg
+
+    return result1, result2
+
+
+print(generador(Hola=1, si=2))

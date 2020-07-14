@@ -1,0 +1,91 @@
+STRINGS metodos (reemplazar string por el nombre de la cadena)
+
+string.replace('c','a') // reemplaza todas las c por a // devuelve la cadena con las letras o frases reemplazadas
+string.split(' ') //Regresa una lista la cual se separa a partir del parametro que le deemos, si ponemos solo un espacio en blanco se nos devuelve la lista con las palabras que estaban separadas por espacio
+string.count('asd') //Cuenta la cantidad de frases o letras indicadas entre comillas simples
+string.find('cas') //Regresa la posicion de la palabra o letra entre comillas
+
+string.lower() //Regresa la cadena en minusculas
+string.upper() //Regresa la cadena en minusculas
+
+LISTAS:
+
+my_list.append("siete") // agrega a la lista como ultimo elemento la palabrea o letra o numero o valor logico indicado
+
+my_list.insert(2, "insertado") //Inserta en la posicion indicada dentrode la lista el elemento indicado
+
+my_list.remove("insertado") //remueve dentro de la lista el elemento indicado (NO SU POSICION)
+
+my_list.pop() // EXTRAE el ultimo elemento de una lista, SI SE USA SOLO, sirve para eliminar el ulitmo elemento de una lista 
+ultimo_elem = my_list.pop() // EXTRAE el ultimo elemento de una lista y lo asignamos a una variable(ultimo_elem) EN ESTE CASO
+
+lista=[2,3,1,9,2,16,67,2,1,75,894,25,96,24,12,653]
+
+lista.sort()//Ordena de manera ascendente la lista
+
+lista.sort(reverse=True) //Ordena de manera descendente la lista
+
+lista_2=[34,23,63,82]
+
+lista_2.extend(lista) // "Extiende" la lista uniendo dos listas en una
+
+listaestra=lista[0:10] (copia la lista del 0 al 10)
+listaestra=lista[:10] (copia la lista del 0principiode lista al 10)
+listaestra=lista[0:] (copia la lista del 0 hata final de la lista)
+listaestra=lista[:] (copia la lista del principio de lista hata final de la lista)
+
+Reverse()
+Buscar con IN
+print('laura' in lista) //Si esta regresa verdadero y si no regresa falso
+.count() tambien sirve acaç
+
+eliminar elementos con 
+del lista(2:4) // elimina elementos del 2 al 3(inclusive)
+
+Conocer indice con .index("laura")
+
+#CURIOSIDAD: SI USAMOS APPEND PARA "EXTENDER" UNA LISTA LO QUE EN REALIDAD VA  PASAR ES QUE SE AGREGA UNA LISTA DENTRO DE OTRA Y NO SE VAN A UNIR LAS LISTAS QUE ES LO QUE SE SUELE QUERER
+
+TUPLAS
+ similares a listas pero inmutables
+tupla=(1,4,2,"string_1",'a',45,True,"si")
+print(tupla)
+print(tupla[3])
+
+
+DICCIONARIOS
+
+no se rigen de indices, Las claves deben ser inmutables
+
+diccionario={ 'primer_elemento': 1,	  'segundo_elemento': "dos",     'tercer_elemento': True,	}
+print(diccionario)
+
+#Obtener valor
+print(diccionario["primer_elemento"])
+
+#Puedo agregar elementos al diccionario entre [la nueva clave] y leugo del = el valor a asignar:
+diccionario['cuarto_elemento']="Nuevo elemento"
+print(diccionario)
+#Se pueden modificar el contenido de cada llave pero no podemos modificar la llave en si. Si la llaver existe se actualiza el contenido
+
+encuentra = diccionario.get('z',False) #Regrsa el contenido de llave 'z', si no existe regresa false   o cualquier elemento que pongamos en el segundo parametro
+print( encuentra)
+
+#Eliminar un elemento con la llave usamos del
+del diccionario["primer_elemento"]
+print("valores del dicc:",diccionario,'\n')
+
+#Obtenemos las llaves y las pasamos como listas
+llave=list(diccionario.keys())
+print(llave)
+
+#Obtenemos las llaves y las pasamos como listas
+contenido=list(diccionario.values())
+print(contenido)
+
+print("EL contenido de la llave","'"+llave[0]+"'","es:",contenido[0])
+
+#para extender el diccionario:
+diccionario_2={"dicc2_1":2,"dicc2_2":"segundovalor del segdicc"}
+diccionario.update(diccionario_2)
+print(diccionario)
