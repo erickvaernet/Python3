@@ -4,6 +4,7 @@ string.replace('c','a') // reemplaza todas las c por a // devuelve la cadena con
 string.split(' ') //Regresa una lista la cual se separa a partir del parametro que le deemos, si ponemos solo un espacio en blanco se nos devuelve la lista con las palabras que estaban separadas por espacio
 string.count('asd') //Cuenta la cantidad de frases o letras indicadas entre comillas simples
 string.find('cas') //Regresa la posicion de la palabra o letra entre comillas
+len(string) // Para sber la longitud de la cadena
 
 string.lower() //Regresa la cadena en minusculas
 string.upper() //Regresa la cadena en minusculas
