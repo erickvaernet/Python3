@@ -423,6 +423,8 @@ auto_1 = auto_protegido()
 auto_1.print_estado()
 
 """
+
+"""
 # POO HERENCIA
 
 # el __ es para privado es decir solo  se accede desde la clase, luego est el "..buscar.." que es para protegido es decir solo la clase padre y
@@ -498,4 +500,56 @@ moto1.estado()
 
 # Podemos poner:
 # class moto_electrica(electrico, vehiculo): esta clase hereda las fiun cy atributo de ambas pero dando rpeferencia ala primero nombrado
-# en este caso si ambos tienen _init_ se usa el de electricos pq esta primero
+# en este caso si ambos tienen _init_ se usa el de electricos pq esta primero o con metodo super()
+
+
+class auto(vehiculo):
+    def __init__(self, marca, gasolina, color):
+        super().__init__(marca, gasolina)  # para heredar init
+        self.color = color
+
+    def estado(self):
+        super().estado()
+        print("color:", self.color)
+
+
+autin1 = auto("marcapapela", 1000, "negro")
+autin1.arrancar(True)
+autin1.acelerar()
+autin1.estado()
+autin1.acelerar()
+autin1.estado()
+autin1.frenar()
+autin1.estado()
+autin1.arrancar(False)
+autin1.estado()
+
+#PARA comoprobar si es instancia
+print(isinstance(auto,vehiculo))
+"""
+"""
+# POO POLIMORFISMO
+
+
+class camion():
+    def desplazar(self):
+        print("moviendo con 6 ruedas")
+
+
+class automovil():
+    def desplazar(self):
+        print("moviendo con 4 ruedas")
+
+
+class motocicleta():
+    def desplazar(self):
+        print("moviendo con 2 ruedas")
+
+
+def desplazar_v(vehic):
+    vehic.desplazar()
+
+
+nuevo_vehiculo = motocicleta()
+desplazar_v(nuevo_vehiculo)
+"""
