@@ -56,7 +56,7 @@ print(lista_2)
 TUPLAS
 similares a listas pero son Inmutables
 
-#IMPORTANTE: poner , aunque haya un elemento por que sino no se toma como tupla// inclusive pueden ir sin parentesis pero si o si coma , auqnue tenga un elemento
+# IMPORTANTE: poner , aunque haya un elemento por que sino no se toma como tupla// inclusive pueden ir sin parentesis pero si o si coma , auqnue tenga un elemento
 
 
 tupla=(1,4,2,"string_1",'a',45,True,"si")
@@ -74,43 +74,43 @@ diccionario={ 'primer_elemento': 1,
 			}
 print(diccionario)
 
-#Obtener valor
+# Obtener valor
 print(diccionario["primer_elemento"])
 
-#Puedo agregar elementos al diccionario entre [la nueva clave] y leugo del = el valor a asignar:
+# Puedo agregar elementos al diccionario entre [la nueva clave] y leugo del = el valor a asignar:
 diccionario['cuarto_elemento']="Nuevo elemento"
 print(diccionario)
-#Se pueden modificar el contenido de cada llave pero no podemos modificar la llave en si. Si la llaver existe se actualiza el contenido
+# Se pueden modificar el contenido de cada llave pero no podemos modificar la llave en si. Si la llaver existe se actualiza el contenido
 
-#Regrsa el contenido de llave 'z', si no existe regresa false   o cualquier elemento que pongamos en el segundo parametro
+# Regrsa el contenido de llave 'z', si no existe regresa false   o cualquier elemento que pongamos en el segundo parametro
 encuentra = diccionario.get('z',False)
 print( encuentra)
 
-#Eliminar un elemento con la llave usamos del
+# Eliminar un elemento con la llave usamos del
 del diccionario["primer_elemento"]
 print("valores del dicc:",diccionario,'\n')
 
-#Obtenemos las llaves y las pasamos como listas
+# Obtenemos las llaves y las pasamos como listas
 llave=list(diccionario.keys())
 print(llave)
 
-#Obtenemos las llaves y las pasamos como listas
+# Obtenemos las llaves y las pasamos como listas
 contenido=list(diccionario.values())
 print(contenido)
 
 print("EL contenido de la llave","'"+llave[0]+"'","es:",contenido[0])
 
-#para extender el diccionario:
+# para extender el diccionario:
 diccionario_2={"dicc2_1":2,"dicc2_2":"segundovalor del segdicc"}
 diccionario.update(diccionario_2)
 print(diccionario)
 
-#Para recorrer diccioanrio
+# Para recorrer diccioanrio
  for key in diccionario:
 >>> print("la clave es: ", key)
 >>> print("su valor: ", diccionario[key])
 
-#Metodo .items() devuelve lista de tuplas cada una con el par [(llave,contenido),(llave,contenido)]
+# Metodo .items() devuelve lista de tuplas cada una con el par [(llave,contenido),(llave,contenido)]
 
 """
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -126,17 +126,17 @@ elif condicion=='falso':
 else:
 	print(condicion)
 
-#todas las variables son booleanas por ejemplo:
+# todas las variables son booleanas por ejemplo:
 
 if []: #al estar vacia la lista actua como falsi
 	print("Lista llena")
 else:
 	print("Lista vacia")
-#para en num 1 es true y 0 es falso por ej // otros ejemplos de falsi diccionarios vacios{} listas vacias[]  tuplas vacias() o string vacio''
-#None tambien actua como falsi
+# para en num 1 es true y 0 es falso por ej // otros ejemplos de falsi diccionarios vacios{} listas vacias[]  tuplas vacias() o string vacio''
+# None tambien actua como falsi
 variable=None
 
-#and or not
+# and or not
 condicion_1=True
 condicion_2=False
 
@@ -151,7 +151,7 @@ elif condicion_1 or condicion_2:
 # Estructuras de control REPETITIVAS  /Bucles o iteraciones
 
 """
-#WHILE
+# WHILE
 
 i=0
 while True:
@@ -171,7 +171,7 @@ while contador <=10:
 """
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 """
-#FOR
+# FOR
 
 lista_for=["asd",1,4,72,64,True,False,"hola",8,9,10,11]
 
@@ -196,11 +196,11 @@ print("for tres")
 for i in range(1,10,2):#EL tercer parametro es steps o pasos, cada cuantos pasos itero en este caso de a dos valores
 	print(lista_for[i])
 
-#Strings son iterables
+# Strings son iterables
 for letra in "Esto es un string":
 	print(letra)
 
-#Los diccionarios tambien son iterables pero devuelven dos valores uno es la llave y el otro es esl contenido
+# Los diccionarios tambien son iterables pero devuelven dos valores uno es la llave y el otro es esl contenido
 diccionario_for={'key1':"AAA", 'key2':2, 'key3':True}
 
 # recordar poner el diccionario.items() //RECORDAR el .items()
@@ -222,15 +222,15 @@ diccionario_e = { key:content for key,content in enumerate(lista_e) if key<6 }
 print("diccionario_e",diccionario_e)
 """
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-""""
-#EXTRAS INFORMATORIO
+"""
+# EXTRAS INFORMATORIO
 
-#LISTAS
+# LISTAS
 lista_info = ['uno',1,'dos',"dois",'tres',False]
 elem_lista = len( lista_info )
 print(elem_lista)
 
-#CONDICIONAL WHILE
+# CONDICIONAL WHILE
 podemos usar else despues de while para indicar que pasa cuando finaliza while (RECONOCe las variables locales de while)
 
 """
@@ -246,7 +246,7 @@ shuffle(x)
 print(x)
 """
 """"
-#El valor predeterminado de end es \n lo que significa que después de la instrucción print se imprimirá una nueva línea. Así que simplemente declaró end es lo que quiere ser impresas después de la declaración print se ha ejecutado
+# El valor predeterminado de end es \n lo que significa que después de la instrucción print se imprimirá una nueva línea. Así que simplemente declaró end es lo que quiere ser impresas después de la declaración print se ha ejecutado
 
 Por ejemplo: - print ("hello",end=" +") imprimirá hello +
 numero = int(input("Dígame cuántas palabras tiene la lista: "))
@@ -284,7 +284,7 @@ def factorial(numero):
 
 print(factorial(5))
 
-#En pyton se pueden regresar muchos valores de una funcion, estos se regresan como una tupla (3,Tru,"stringsi",2,Fale)
+# En pyton se pueden regresar muchos valores de una funcion, estos se regresan como una tupla (3,Tru,"stringsi",2,Fale)
 def tipos_d():
 	return "String",[1,"true"],123,14,"fin"
 
@@ -294,18 +294,18 @@ tupla_de_func= tipos_d()
 segundof=tupla_de_func[2]
 print(segundof)
 
-#tambiens e puede asignar asi: (pero tienen que estar el mismo num de variables que de valores retornados)
+# tambiens e puede asignar asi: (pero tienen que estar el mismo num de variables que de valores retornados)
 dat_cero,dat_uno,dat_dos,dat_tres,dat_tres= tipos_d()
 print(dat_tres, dat_cero)
 
-#diferentes formas
+# diferentes formas
 ultimo= tipos_d()[4]
 doble=tipos_d()[0:3]
 print(ultimo)
 print(doble)
 
 
-#se pueden pasar funciones como parametro
+# se pueden pasar funciones como parametro
 def multiplicar (num1,num2):
 	return num1*num2
 
@@ -314,7 +314,7 @@ def efe (funcion):
 
 print (efe(multiplicar))
 
-#IMPORTANTE se pude usar * para decir que se puede pasar n-argumentos a la funcion
+# IMPORTANTE se pude usar * para decir que se puede pasar n-argumentos a la funcion
 
 #	* -----> n valores ----->tuplas
 #	**-----> n valores ----->diccionario
@@ -327,7 +327,7 @@ def sumar(*args):
 
 print(sumar(1,2,3,4,5,6,7,8,9,10))
 
-#SIMILAR con ** pero es como diccionario
+# SIMILAR con ** pero es como diccionario
 
 def sum(**kwargs):
 	result= kwargs.get('numero',"No existe una key llamada numero")
@@ -338,8 +338,8 @@ sum(valor=1,numero=2,nem="soyletra")
 """
 
 """
-#LAMBDAS o funciones anonimas
-#sirven para escribir funciones cortas//simples?
+# LAMBDAS o funciones anonimas
+# sirven para escribir funciones cortas//simples?
 
 revertir = lambda cadena: cadena[::-1]
 print(revertir("revertira?"))
@@ -368,16 +368,16 @@ def generador(*args=, **kwargs):
 print(generador(Hola=1, si=2))
 """
 """
-#NamesSpace y llamadas de retorno
+# NamesSpace y llamadas de retorno
 Crear una función que luego sea llamada desde otra función validando la
 existencia de la función.
 
 def mensaje(nombre):
- #Esta función retorna un mensaje de saludo
+ # Esta función retorna un mensaje de saludo
  return "Hola " + nombre
 
 def llamada_de_retorno(nombre, funcion=""):
- #Llamada de retorno a nivel global
+ # Llamada de retorno a nivel global
   if funcionin globals():
  return globals()[funcion](nombre)
  else:
@@ -387,3 +387,115 @@ print(llamada_de_retorno("Maria", "mensaje"))
 print(llamada_de_retorno("Maria", "saludo"))
 
 """
+"""
+diccio1 = {"aa": "asd", "diccio2": {"dica": "aaaa"}}
+
+print(diccio1["diccio2"].get("dica"))
+"""
+
+"""
+# Prog Orientada a Obejtos
+# con __init__ creamos el constructor, podemos usar __ antes de una propiedad para que estee protegida y solo se pueda acceder a ella mediante la
+# misma clase, es decir solo se pueden modificar estos atributos desde dentro de la clase// Sucede lo mismo con metodos que tienen__
+# Siempre se pasa self como parametro a los metodos en python
+
+class auto_protegido():
+
+    def __init__(self):
+        self.__ruedas = 4
+        self.__arrancado = False
+        self.__color = "Negro"
+
+    def arrancar(self, estado):
+        self.__arrancado = estado
+        if estado:
+            print("El auto esta arrancado")
+        else:
+            print("El auto esta apagado")
+
+    def print_estado(self):
+        print("El auto tiene:", self.__ruedas, "ruedas, es de color",
+              self.__color, "y esta", self.__arrancado)
+
+
+auto_1 = auto_protegido()
+
+auto_1.print_estado()
+
+"""
+# POO HERENCIA
+
+# el __ es para privado es decir solo  se accede desde la clase, luego est el "..buscar.." que es para protegido es decir solo la clase padre y
+# las clases hijos pueden modificar ese atrib y ulltimo esta publico que es como normalmente se declara una variable sin __
+
+
+class vehiculo():
+
+    def __init__(self, marca, gasolina):
+        self.__marca = marca
+        self.gasolina = gasolina
+        self.__arrancado = False
+        self.velocidad = 0
+
+    def arrancar(self, estado):
+        self.__arrancado = estado
+        if estado:
+            print("El vehiculo esta arrancado")
+        else:
+            print("El vehiculo esta apagado")
+
+    def acelerar(self):
+        if self.__arrancado:
+            self.velocidad += 10
+        else:
+            print("Encienda el vehiculo, para acelerar")
+            return
+
+    def estado(self):
+        print("Velocidad:", self.velocidad, "\n",
+              "Gasolina:", self.gasolina, "\n")
+
+    def frenar(self):
+        if self.__arrancado:
+            self.velocidad -= 10
+        else:
+            print("Encienda el vehiculo, para frenar")
+            return
+
+# para acceder a atributos y metodos de la clase padre es necesario que no le pongamos en la clase padre los __ ya que no me permmitira modificar atributos
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# Para extender constructor mirar aca:
+
+
+class moto(vehiculo):
+    def __init__(self, marca, gasolina):
+        vehiculo.__init__(self, marca, gasolina)
+        self.__ruedas = 2
+
+    def estado(self):
+        print("Velocidad:", self.velocidad, "\n",
+              "Gasolina:", self.gasolina, "\n",
+              "ruedas:", self.__ruedas, "\n")
+
+
+moto1 = moto("marcaPapel", 1000)
+moto1.arrancar(True)
+moto1.acelerar()
+moto1.estado()
+moto1.acelerar()
+moto1.acelerar()
+moto1.acelerar()
+moto1.estado()
+moto1.frenar()
+moto1.estado()
+moto1.frenar()
+moto1.estado()
+moto1.arrancar(False)
+moto1.estado()
+
+# HERNCIA MULTIPLE
+
+# Podemos poner:
+# class moto_electrica(electrico, vehiculo): esta clase hereda las fiun cy atributo de ambas pero dando rpeferencia ala primero nombrado
+# en este caso si ambos tienen _init_ se usa el de electricos pq esta primero
