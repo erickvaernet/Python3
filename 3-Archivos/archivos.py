@@ -84,6 +84,7 @@ archivo.seek(len(archivo.readline())+1)
 print(archivo.readline())
 archivo.close()
 """
+"""
 # MODO LECTURA  Y ESCRITURA
 
 # Con r+ indicamos el modo lectura y escritura
@@ -96,3 +97,4 @@ lista_lineas[1] = "Esta linea ah sido modificada"
 archivo.seek(0)
 archivo.writelines(lista_lineas)
 archivo.close()
+"""
