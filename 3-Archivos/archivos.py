@@ -61,7 +61,38 @@ while num != 0:
 print("Sumatoria:", sumatoria)
 print("Dígitos:", sumaDigitos(sumatoria))
 """
+"""
+# CON seek podemos mover el puntero dentro del archivo
+archivo = open("ArchivoDeTexto.txt", "r")
 
+print(archivo.read(10))
 
-while a in range(0, 4):
-    print("asd")
+archivo.seek(0)
+
+print(archivo.read(20))
+
+archivo.seek(0)
+archivo.seek(len(archivo.read())/2)
+
+print(archivo.read())
+
+archivo.seek(0)
+# +1 por que sino al usar el proximo read line empieza desde el final y no lee la siguiente linea
+archivo.seek(len(archivo.readline())+1)
+# IMPORTANTE leer lo de aca arriba en +1
+
+print(archivo.readline())
+archivo.close()
+"""
+# MODO LECTURA  Y ESCRITURA
+
+# Con r+ indicamos el modo lectura y escritura
+archivo = open("ArchivoDeTexto.txt", "r+")
+
+lista_lineas = archivo.readlines()
+
+lista_lineas[1] = "Esta linea ah sido modificada"
+
+archivo.seek(0)
+archivo.writelines(lista_lineas)
+archivo.close()
