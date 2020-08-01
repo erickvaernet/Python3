@@ -395,9 +395,11 @@ print(diccio1["diccio2"].get("dica"))
 
 """
 # Prog Orientada a Obejtos
-# con __init__ creamos el constructor, podemos usar __ antes de una propiedad para que estee protegida y solo se pueda acceder a ella mediante la
+# con __init__ creamos el constructor, podemos usar __ antes de una propiedad para que estee protegida(o privada?) y solo se pueda acceder a ella mediante la
 # misma clase, es decir solo se pueden modificar estos atributos desde dentro de la clase// Sucede lo mismo con metodos que tienen__
 # Siempre se pasa self como parametro a los metodos en python
+#!!!! privado en realidad agrega nombre de clase al atributo e impide o genera conflicto en algunos casos, ver usos en:
+# https://stackoverrun.com/es/q/5533227
 
 class auto_protegido():
 
@@ -422,6 +424,13 @@ auto_1 = auto_protegido()
 
 auto_1.print_estado()
 
+print(auto_protegido) # (a que clase pertenece)
+print(type(auto_1))  # (a que clase pertenece)
+print(auto_1.__class__)  # (a que clase pertenece)
+
+print(auto_protegido.__name__)  # (a que clase pertenece SIN ADORNO)
+print(type(auto_1).__name__) # (a que clase pertenece SIN ADORNO)
+print(auto_1.__class__.__name__) # (a que clase pertenece SIN ADORNO)
 """
 
 """
@@ -524,8 +533,8 @@ autin1.estado()
 autin1.arrancar(False)
 autin1.estado()
 
-#PARA comoprobar si es instancia
-print(isinstance(auto,vehiculo))
+# PARA comoprobar si es instancia
+print(isinstance(auto, vehiculo))
 """
 """
 # POO POLIMORFISMO
