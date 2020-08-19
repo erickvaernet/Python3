@@ -30,7 +30,7 @@ class Calzado(Producto):
     def __init__(self, precio, descripcion, stock, talle, color):
         Producto.__init__(self, precio, descripcion, stock)
         # super().__init__( precio, descripcion, stock) #Funciona igual que la anterior debido a que super referencia a clase padre
-        # pero no se pasa self en super()!!!!!
+        # pero no se pasa self en super()!!!!! OJO SOLO RECOMENDADO CUANDO EXISTE UNICA SUPERCLASE!!!
         self.talle = talle
         self.color = color
 
